@@ -1,0 +1,379 @@
+.contact_wrapper {
+    padding: 0 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact_title_wrapper {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.email_copy button {
+    font-size: 2.2rem;
+    text-decoration: underline;
+    color: var(--blue);
+    background: transparent;
+    border: none;
+}
+
+.hidden {
+    display: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.hidden button {
+    background: transparent;
+    border: none;
+    color: var(--blue);
+    font-weight: inherit;
+}
+
+.hidden button:hover,
+.send:hover {
+    cursor: pointer;
+}
+
+.email_copy span {
+    display: block;
+}
+
+.contact_title_wrapper>h1 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.contact_title_wrapper>h1:after {
+    content: '–';
+}
+
+.scroll_to_contact {
+    text-align: center;
+    font-size: 0.9rem;
+    padding-bottom: 2.2rem;
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(4px);
+        -webkit-transform: translateY(4px);
+        -moz-transform: translateY(4px);
+    }
+}
+
+.scroll_to_contact:before {
+    content: '↓';
+    display: inline-block;
+    position: relative;
+    animation: moveDown 0.6s ease-in-out infinite alternate;
+}
+
+.input_section {
+    margin-bottom: 2.4rem;
+}
+
+.on_focus:focus,
+.selectCustom.isActive .selectCustom-trigger {
+    outline: 1px solid var(--focus_color);
+}
+
+.form_section label:not(.cbx_label),
+.form_section input:not(input[type="checkbox"]),
+.form_section textarea {
+    display: block;
+}
+
+.form_section input:not(input[type="checkbox"]) {
+    min-height: 3rem;
+}
+
+.form_section input:not(input[type="checkbox"]),
+.form_section textarea,
+.form_section select,
+.send,
+.selectCustom {
+    width: 100%;
+}
+
+.form_section input:not(input[type="checkbox"]),
+.form_section textarea,
+.form_section select {
+    padding: 0.6rem 1rem;
+    color: inherit;
+}
+
+.form_section input,
+.form_section textarea,
+.form_section select,
+.selectCustom_trigger {
+    background: transparent;
+    border: 1px solid var(--input-border);
+}
+
+.form_section textarea {
+    min-height: 9rem;
+    resize: none;
+
+}
+
+.select_tel {
+    display: flex;
+}
+
+.form_section input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom_checkbox {
+    display: flex !important;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.custom_checkbox .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--input-border);
+}
+
+.custom_checkbox input:checked+.checkmark::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom_checkbox input:checked+.checkmark {
+    background: var(--blue);
+}
+
+.custom_checkbox input:focus+.checkmark {
+    outline: 1px solid var(--focus_color);
+}
+
+.form_section label {
+    font-size: 0.8rem;
+}
+
+.form_section label:not(.cbx_label) {
+    margin-bottom: 0.5rem;
+}
+
+.email_copy {
+    text-align: center;
+}
+
+.send,
+.send+p {
+    display: block;
+}
+
+.send {
+    margin-bottom: 1.3rem;
+    background: var(--blue);
+    color: white;
+    border: none;
+    font-size: 0.7rem;
+    padding: 1.2rem 0;
+    font-weight: 600;
+}
+
+.social_media_section {
+    margin-top: 6rem;
+}
+
+.send+p {
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+.send+p a {
+    color: inherit;
+}
+
+.social_media_section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.social_links a:not(.social_links a:last-child) {
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.social_media_section h2,
+.social_media_section h3 {
+    text-align: center;
+}
+
+.social_links a {
+    display: block;
+    text-align: center;
+}
+
+.input_section.subscribe_section {
+    display: flex;
+    align-items: center;
+}
+
+.back_to_top {
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0 3rem;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-3px);
+        -webkit-transform: translateY(-3px);
+        -moz-transform: translateY(-3px);
+    }
+}
+
+.back_to_top a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color);
+    text-decoration: none;
+}
+
+.back_to_top a:before {
+    content: '↑';
+    display: inline-block;
+    position: relative;
+    animation: moveUp 0.6s ease-in-out infinite alternate;
+}
+
+/* Native select and custom select styling section from 247 - 304 */
+.form_section select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form_section select,
+.selectCustom {
+    min-height: 3rem;
+}
+
+.selectCustom {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: none;
+}
+
+.selectWrapper {
+    position: relative;
+}
+
+@media (hover: hover) {
+    .selectCustom {
+        display: block;
+    }
+
+    .selectNative:focus+.selectCustom {
+        display: none;
+    }
+}
+
+.selectCustom_trigger {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg_color);
+    padding: 0.86rem 1rem;
+    cursor: pointer;
+}
+
+.selectCustom_trigger:hover {
+    border-color: #8c00ff;
+}
+
+.selectCustom_options {
+    position: absolute;
+    top: calc(3.8rem + 0.8rem);
+    left: 0;
+    width: 100%;
+    border: 1px solid #6f6f6f;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #e9e1f8;
+    z-index: 1;
+    padding: 0.8rem 0;
+    display: none;
+}
+
+@media screen and (min-width:800px) {
+    .contact_title_wrapper {
+        min-height: 0;
+    }
+
+    .names_section,
+    .grouped_select {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .names_section .input_section,
+    .grouped_select .input_section {
+        margin-bottom: 0;
+        width: 250px;
+        flex-grow: 0.3;
+    }
+
+    .scroll_to_contact {
+        display: none;
+    }
+
+    .email_copy {
+        display: none;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    .contact_wrapper {
+        padding-top: 8rem;
+    }
+
+    .send {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .contact_wrapper h1 {
+        font-size: 6rem;
+    }
+}

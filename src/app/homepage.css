@@ -1,0 +1,228 @@
+.page-title-wrapper {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.build-website {
+    padding: 3rem 1.5rem;
+}
+
+.page-title-section {
+    padding: 3rem 0 4rem;
+}
+
+h1+div {
+    margin-bottom: 2rem;
+}
+
+.description-section p,
+.service-section p {
+    padding: 0 0.4rem;
+}
+
+.intro-image-wrapper {
+    text-align: center;
+}
+
+.page-title-section+div {
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.description-section p {
+    margin-top: 1.5rem;
+}
+
+.description-section {
+    padding: 0 0 5rem;
+}
+
+.service-section h2 {
+    padding: 1rem 0;
+}
+
+.service-section h2+div {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-section h3 {
+    padding: 0.7rem 0;
+}
+
+.learn-more {
+    display: inline-block;
+    color: inherit;
+    padding-left: 0.3rem;
+}
+
+.learn-more:after {
+    content: '>';
+    display: inline-block;
+    padding-left: 0.2rem;
+}
+
+.testimonial_section {
+    margin-top: 2rem;
+    background: #dbeafe;
+}
+
+.testimonial_wrapper {
+    padding: 3rem 1.2rem;
+}
+
+.author_image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.about_author span {
+    display: block;
+}
+
+.about_author span:first-child {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.author_image,
+.testimonial_wrapper h2 {
+    text-align: center;
+}
+
+.testimonial_wrapper h2 {
+    margin-bottom: 3rem;
+}
+
+.author_image,
+.about_author {
+    margin-bottom: 1.3rem;
+}
+
+.author_message p {
+    margin-bottom: 4rem;
+}
+
+.author_message {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.swiper-pagination-bullet {
+    margin: 0 0.5rem;
+}
+
+.portfolio_link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 600;
+}
+
+.portfolio_link_section {
+    padding: 4rem 1rem;
+}
+
+.portfolio_link:after {
+    content: '';
+    height: 3px;
+    width: 100px;
+    background: var(--text-color);
+}
+
+swiper-container::part(bullet-active) {
+    background-color: var(--blue);
+
+}
+
+swiper-container::part(pagination) {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+    display: none;
+    width: 25px;
+    height: 25px;
+    color: var(--blue);
+}
+
+.about_author span {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:650px) {
+    .about_author {
+        padding-left: 3rem;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .about_author {
+        padding-left: 0;
+    }
+
+    .testimonial_wrapper {
+        text-align: center;
+    }
+
+    swiper-container::part(button-prev),
+    swiper-container::part(button-next) {
+        display: block;
+    }
+}
+
+@media screen and (min-width:1000px) {
+
+    .page-title-wrapper,
+    .service-section h2+div {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .service-section h2+div,
+    .portfolio_link_section {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+    .page-title-wrapper {
+        gap: 1.5rem;
+
+    }
+
+    .service-section h2 {
+        padding: 2rem 0;
+    }
+
+    .service-section h2+div div:last-child,
+    .intro-text {
+        width: 600px;
+    }
+
+    .service-section p {
+        padding: 0;
+        text-align: start;
+    }
+
+    .description-section p {
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+
+    .portfolio_link {
+        font-size: 2rem;
+    }
+}
