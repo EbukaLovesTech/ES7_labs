@@ -4,18 +4,18 @@ import BudgetSelect from './component/budgetselect';
 export default function ContactPage() {
     return (
         <main>
-            <div className={Styles.contact_wrapper} id='page'>
+            <div className={Styles.contact_wrapper} id="page">
                 <div className={Styles.contact_title_wrapper}>
-                    <h1> LET'S TALK </h1>
+                    <h1> LET&apos;S TALK </h1>
                     <div className={Styles.email_copy}>
                         <button>HELLO@ES7.COM</button>
-                        <span>{'(👆TAP TO COPY EMAIL)'}</span></div>
+                        <span>{"(👆TAP TO COPY EMAIL)"}</span></div>
                 </div>
                 <div className={Styles.hidden}>
                     <span>FILL IN THE FORM BELOW, OR REACH OUT TO US DIRECTLY — </span>
                     <span>
                         <button>HELLO@ES7.COM</button>
-                        {'(CLICK TO COPY)'}
+                        {"(CLICK TO COPY)"}
                     </span>
                 </div>
                 <div className={Styles.form_section}>
@@ -23,12 +23,12 @@ export default function ContactPage() {
                     <form>
                         <div className={`${Styles.input_section} ${Styles.names_section}`}>
                             <div className={`${Styles.input_section} first_name_section`}>
-                                <label htmlFor='first_name'>FIRST NAME</label>
-                                <input type='text' name='first_name' id='first_name' className={Styles.on_focus} />
+                                <label htmlFor="first_name">FIRST NAME</label>
+                                <input type="text" name="first_name" id="first_name" className={Styles.on_focus} />
                             </div>
                             <div className={`${Styles.input_section} last_name_section`}>
-                                <label htmlFor='last_name'>LAST NAME</label>
-                                <input type='text' name='last_name' id='last_name' className={Styles.on_focus} />
+                                <label htmlFor="last_name">LAST NAME</label>
+                                <input type="text" name="last_name" id="last_name" className={Styles.on_focus} />
                             </div>
                         </div>
                         <div className={`${Styles.input_section} email_section`}>
@@ -241,8 +241,8 @@ export default function ContactPage() {
                             <BudgetSelect Styles={Styles} />
                             <div className={`${Styles.input_section} discover_section`}>
                                 <label htmlFor='discover' aria-label='Optional'>HOW DID YOU HEAR ABOUT US?</label>
-                                <select id='discover' className='on-focus'>
-                                    <option diabled={true} value>Select...</option>
+                                <select id='discover' className={Styles.on_focus}>
+                                    <option disabled={true}>Select...</option>
                                     <option>Search engine</option>
                                     <option>Social media</option>
                                     <option>Blog or publication</option>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                         </div>
                         <div className={`${Styles.input_section} textarea_section`}>
                             <label htmlFor='message'>HOW CAN WE HELP?</label>
-                            <textarea id='message' rows='7' name='message' className='on-focus'></textarea>
+                            <textarea id='message' rows='7' name='message' className={Styles.on_focus}></textarea>
                         </div>
                         <div className={`${Styles.input_section} subscribe_section`}>
                             <label htmlFor='check_box' className={Styles.custom_checkbox}>

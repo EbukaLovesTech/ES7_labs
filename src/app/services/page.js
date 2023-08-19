@@ -41,7 +41,7 @@ export default function ServicePage() {
                                 <h2>Captivating Visuals that Strike a Chord </h2>
                                 <p>
                                     First impressions matter, especially in the fast-paced music industry.
-                                    We craft visually stunning websites that capture attention and leave a lasting impact. Whether it's high-resolution images, striking album artwork displays,
+                                    We craft visually stunning websites that capture attention and leave a lasting impact. Whether it&apos;s high-resolution images, striking album artwork displays,
                                     or captivating video backgrounds, we infuse creativity into every pixel.
                                 </p>
                             </div>
@@ -120,7 +120,7 @@ export default function ServicePage() {
                             </div>
                             <div>
                                 <h2> Secure and Responsive Platforms </h2>
-                                <p>With the increasing diversity of devices used to access websites, it's vital that your site performs flawlessly across them all. Our websites are optimized for mobile, tablet, and desktop,
+                                <p>With the increasing diversity of devices used to access websites, it&apos;s vital that your site performs flawlessly across them all. Our websites are optimized for mobile, tablet, and desktop,
                                     and built with robust security measures to keep your content safe.</p>
                             </div>
                         </div>

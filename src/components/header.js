@@ -2,25 +2,42 @@
 import styles from '../app/layout.module.css';
 import Link from 'next/link';
 import Image from 'next/image'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 export default function HeaderComponent() {
     const [isOpen, setIsopen] = useState(false);
     function handleClick() {
         setIsopen(!isOpen);
     }
+    function linkClick() {
+        if (window.innerWidth < 1000) {
+            setIsopen(false);
+            console.log('less than 1000')
+        }
+    }
+    useEffect(() => {
+        const body = document.body;
+        // Manipulate the body element here
+        if (isOpen) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    }, [isOpen]);
     return (
         <div className={styles.header_wrapper}>
             <header className={isOpen === true ? styles.navbar_is_opened : null}>
                 <div className={styles.container}>
                     <div className={styles.logo_menu}>
                         <div className='logo'>
-                            <Image
-                                src="/es7labs.svg"
-                                alt="ES7 LABS Logo"
-                                width={130}
-                                height={40}
-                                priority
-                            />
+                            <Link href='/'>
+                                <Image
+                                    src="/es7labs.svg"
+                                    alt="ES7 LABS Logo"
+                                    width={130}
+                                    height={40}
+                                    priority
+                                />
+                            </Link>
                         </div>
                         <div className={styles.menu_wrapper}>
                             <button aria-label='Menu' className={styles.menu_btn} onClick={handleClick}>
@@ -36,19 +53,19 @@ export default function HeaderComponent() {
                             <nav aria-label='Main navigation'>
                                 <ul className={styles.links_wrapper}>
                                     <li className={styles.list_link}>
-                                        <Link href='/' className={styles.link}>Home</Link>
+                                        <Link href='/' className={styles.link} onClick={linkClick}>Home</Link>
+                                    </li>
+                                    <li className={styles.list_link} >
+                                        <Link href='/about' className={styles.link} onClick={linkClick}>About</Link>
                                     </li>
                                     <li className={styles.list_link}>
-                                        <Link href='/about' className={styles.link}>About</Link>
+                                        <Link href='/services' className={styles.link} onClick={linkClick}>Services</Link>
                                     </li>
                                     <li className={styles.list_link}>
-                                        <Link href='/services' className={styles.link}>Services</Link>
+                                        <Link href='/' className={styles.link} onClick={linkClick}>Blog</Link>
                                     </li>
                                     <li className={styles.list_link}>
-                                        <Link href='/' className={styles.link}>Blog</Link>
-                                    </li>
-                                    <li className={styles.list_link}>
-                                        <Link href='/contact' className={styles.link}>Contact</Link>
+                                        <Link href='/contact' className={styles.link} onClick={linkClick}>Contact</Link>
                                     </li>
                                 </ul>
                             </nav>

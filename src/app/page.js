@@ -12,8 +12,8 @@ export default function Home() {
             <div className='intro-text'>
               <h1>Unleash Your Musical Identity: Elevate Your Online Presence with Our Web Services</h1>
               <div>
-                <p>As <b>Musicians, Bands, and Djs, </b>your online presence is your stage, and we're here to make it unforgettable.
-                  Let's create a website that echoes your sound and amplifies your reach.
+                <p>As <b>Musicians, Bands, and Djs, </b>your online presence is your stage, and we&apos;re here to make it unforgettable.
+                  Let&apos;s create a website that echoes your sound and amplifies your reach.
                 </p>
               </div>
             </div>
@@ -40,7 +40,7 @@ export default function Home() {
                   Bands, and DJs!</b> At <b>ES7 LABS,</b> we specialize in crafting online experiences that harmonize
                 with your unique sound. Our web development services are finely tuned to cater to the diverse needs of the music world.
                 From dynamic websites that captivate your audience to seamless event integration that keeps your fans in
-                rhythm with your schedule – we're here to help you strike the perfect chord in the virtual realm.
+                rhythm with your schedule – we&apos;re here to help you strike the perfect chord in the virtual realm.
               </p>
             </div>
           </section>

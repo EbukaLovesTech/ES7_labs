@@ -132,6 +132,20 @@
     display: flex;
 }
 
+.select_tel select {
+    width: 140px;
+    border-right: none;
+}
+
+.select_tel select:focus,
+.select_tel .on_focus:focus {
+    outline: none;
+}
+
+.select_tel input[type="tel"] {
+    border-left: none;
+}
+
 .form_section input[type="checkbox"] {
     position: absolute;
     opacity: 0;
@@ -272,11 +286,12 @@
     animation: moveUp 0.6s ease-in-out infinite alternate;
 }
 
-/* Native select and custom select styling section from 247 - 304 */
+/* Native select and custom select styling section from 289 - 344 */
 .form_section select {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    cursor: pointer;
 }
 
 .form_section select,
@@ -314,22 +329,30 @@
     cursor: pointer;
 }
 
-.selectCustom_trigger:hover {
-    border-color: #8c00ff;
-}
-
 .selectCustom_options {
     position: absolute;
-    top: calc(3.8rem + 0.8rem);
+    top: calc(2.3rem + 0.8rem);
     left: 0;
     width: 100%;
-    border: 1px solid #6f6f6f;
+    border: 1px solid var(--input-border);
     border-radius: 0.4rem;
-    background-color: #fff;
+    background-color: var(--bg_color);
     box-shadow: 0 0 4px #e9e1f8;
     z-index: 1;
     padding: 0.8rem 0;
     display: none;
+}
+
+.select_custom_opt:not(.select_custom_opt:last-of-type) {
+    border-bottom: 1px solid var(--input-border);
+}
+
+.select_custom_opt {
+    padding: 0.8rem 0 0.8rem 0.5rem;
+}
+
+.selectCustom.isActive .selectCustom_options {
+    display: block;
 }
 
 @media screen and (min-width:800px) {

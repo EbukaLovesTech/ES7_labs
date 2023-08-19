@@ -1,12 +1,12 @@
 import './globals.css';
 import 'normalize.css/normalize.css';
 import HeaderComponent from '@/components/header';
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import Image from 'next/image';
 import Styles from './layout.module.css'
 
 
-const inter = Inter({ subsets: ['latin'] });
+const myFont = localFont({ src: './fonts/my-font.ttf' })
 
 export const metadata = {
   title: 'ES7 LABS',
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel='icon' href='/es7labs.svg' />
       </head>
-      <body className={inter.className}>
+      <body className={myFont.className}>
         <div className={Styles.root}>
           <HeaderComponent />
           {children}
